@@ -2,7 +2,7 @@
 
 <p>Return <em>the merged string.</em></p>
 
-<p>&nbsp;</p>
+<p>&nbsp;</p> 
 <p><strong class="example">Example 1:</strong></p>
 
 <pre><strong>Input:</strong> word1 = "abc", word2 = "pqr"
