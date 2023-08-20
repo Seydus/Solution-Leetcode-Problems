@@ -3,7 +3,7 @@
 <p><strong>Note</strong> that you must do this in-place without making a copy of the array.</p>
 
 <p>&nbsp;</p>
-<p><strong class="example">Example 1:</strong></p>
+<p><strong class="example">Example 1:</strong></p> 
 <pre><strong>Input:</strong> nums = [0,1,0,3,12]
 <strong>Output:</strong> [1,3,12,0,0]
 </pre><p><strong class="example">Example 2:</strong></p>
