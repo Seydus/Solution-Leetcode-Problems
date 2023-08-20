@@ -48,7 +48,7 @@ Node* contains(HashSet* set, char key)
         node = node->next;
     }
 
-    return NULL;
+    return NULL; 
 }
 
 void add(HashSet* set, char key) 
