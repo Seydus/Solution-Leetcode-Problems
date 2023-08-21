@@ -10,7 +10,7 @@ int* smallerNumbersThanCurrent(int* nums, int numsSize, int* returnSize) {
     for (int i = 0; i < numsSize; i++) 
     {
         hashmap[nums[i]]++;
-    }
+    } 
     
     for (int i = 0; i < numsSize; i++) 
     {
