@@ -4,24 +4,27 @@
 #define SIZE 101
 
 int* smallerNumbersThanCurrent(int* nums, int numsSize, int* returnSize) {
-    int freq[SIZE] = {0};
+    int* hashmap = (int*)calloc(SIZE, sizeof(int));
     int* result = (int*)malloc(numsSize * sizeof(int));
     
     for (int i = 0; i < numsSize; i++) 
     {
-        freq[nums[i]]++;
-    }
-
-    for (int i = 1; i < SIZE; i++) 
-    {
-        freq[i] += freq[i - 1];
+        hashmap[nums[i]]++;
     }
     
     for (int i = 0; i < numsSize; i++) 
     {
-        result[i] = nums[i] == 0 ? 0 : freq[nums[i] - 1];
+        int count = 0;
+        
+        for (int j = 0; j < nums[i]; j++) 
+        {
+            count += hashmap[j];
+        }
+
+        result[i] = count;
     }
     
     *returnSize = numsSize;
+    free(hashmap);
     return result;
 }
