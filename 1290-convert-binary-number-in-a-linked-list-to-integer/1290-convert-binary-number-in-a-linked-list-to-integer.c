@@ -1,5 +1,3 @@
-#include <math.h>
-
 /**
  * Definition for singly-linked list.
  * struct ListNode {
@@ -7,21 +5,14 @@
  *     struct ListNode *next;
  * };
  */
-
 int getDecimalValue(struct ListNode* head) {
+    int decimal_value = 0;
     struct ListNode* current = head;
-    int power = 0, result = 0;
     
-    for(; current != NULL; current = current->next, power++) { }
-    
-    current = head;
-    
-    for(; current != NULL; current = current->next, power--) {
-        if(current->val != 0)
-        {
-            result += pow(2, power - 1);
-        }
+    while (current != NULL) {
+        decimal_value = (decimal_value << 1) | current->val;
+        current = current->next;
     }
     
-    return result;
+    return decimal_value;
 }
